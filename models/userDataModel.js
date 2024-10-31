@@ -13,11 +13,13 @@ const userDataSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-
+  password: {
+    type: String,
+    required: true,
+  },
   age: {
     type: Number,
     required: true,
-
   },
   address: {
     type: String,
@@ -29,14 +31,13 @@ const userDataSchema = new mongoose.Schema({
   },
 
   createdAt: {
-    type: Date,
+    type: String,
     default: Date.now,
   },
   updatedAt: {
-    type: Date,
+    type: String,
     default: Date.now,
   },
 });
 
-
-module.exports = mongoose.model("userData",userDataSchema)
+module.exports = mongoose.model("userData", userDataSchema);
